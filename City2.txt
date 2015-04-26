@@ -1,0 +1,17 @@
+Bari,Hotel Imago,4,100,The Nicolaus Hotel,4,80,Mozart Caffe,Biancofiore,Orecchiette al Ragù di carne di cavallo,Basilica di San Nicola 
+Bologna,Grand Hotel Majestic Gia Baglioni,5,300,Aemilia Hotel,4,80,Cremeria Santo Stefano,Pasta Fresca Naldi,Tagliatelle con ragù alla Bolognese,Basilica di San Petronio
+Cagliar,Hotel Nautilus,4,120,T Hotel,3,115,Sabores,Sardinian Wine Bar,Fregula cun cocciula,Basilica di San Saturnino
+Firenze,Hotel David,3,162,The St. Regis Florence,5,720,All'Antico Vinaio,Pane & Toscana,Bistecca Fiorentina,Galleria degli Uffizi 
+Genova,Grand Hotel Savoia,5,130,Melia Genova,4,100,Les Barriques,Voglie di Pizza di Manuel Camedda,Spaghetti al pesto alla Genovese,Cattedrale di San Lorenzo
+Messina,Guest House Residence,2,40,Residence Calavà Villa Rosa,3,90,Ristorante Bellavista,La Tonnara,Stoccafisso alla Messinese,Basilica Cattedrale Protometropolitana
+Milano,Hotel Spadari al Duomo,4,373,Park Hyatt Milan,5,720,Da Vic Ristorante Guerrini,Salad Me Cafe’,Cotoletta alla Milanese,Duomo di Milano
+Napoli,Hotel Cristina,3,130,La Ciliegina Lifestyle Hotel,4,180,Antica Salumeria Pane 1864,La Campagnola Pizzeria & Trattoria,Pizza Napoletana,Centro Storico di Napoli
+Padova,Hotel M14,3,60,Belludi 37,4,90,Ristorante Belle Parti,Liviangior,Polenta e Baccalà,Prato della Valle
+Palermo,Alma Hotel,4,122,Hotel Ariston,4,100,Il Ragno,Mounir Pizzeria & Kebab,Sfincione,Chiesa di San Giovanni degli Eremiti 
+Perugia,Il Castellaro,3,40,Borgo Dei Conti Resort,4,80,La Taverna,La Bottega di Perugia,Colombaccio selvatico,La Fontana Maggiore
+Roma,Appia Antica Resort,4,248,Deko Rome,3,168,Pane & Vino,I Vicini Bistrot,rigatoni con la pajata,Piazza di Spagna
+Sassari,Hotel Carlo Felice,4,50,Hotel Vittorio Emanuele,3,55,Al Vecchio Borgo,Il Giamaranto,Favata,Piazza d’Italia
+Torino,Grand Hotel Sitea,4,200,Residence Sacchi,3,100,All'improvviso,Accademia Del Panino,Ravioli del Plin con ricotta e spinaci,Chiesa di San Domenico
+Trento,Hotel Montana,3,90,Villa Madruzzo,4,120,Locanda Margon,Osteria a Le Due Spade,Canederli,Piazza Duomo
+Trieste,Starhotels Savoia Excelsior Palace,3,120,Hotel Residence L'Albero Nascosto,3,110,Cantina del Vescovo,Pizzeria Da Gino,Minestra de' bobici con fagioli,Piazza Unità d’Italia
+Venezia,Hotel Moresco,5,341,Hotel Ai Cavalieri di Venezia,4,266,Hostaria Vecio Biavarol,Ristorante Alle Corone,Risi e Bisi,Piazza San Marco
