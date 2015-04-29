@@ -8,6 +8,7 @@
 
 using namespace std;
 
+void displayMenu();
 
 int main(int argc, char*argv[])
 {
@@ -131,25 +132,28 @@ int main(int argc, char*argv[])
                 l.createLinklist(city,hotel,star,price,hotel2,star2,price2,resturant,resturant2,dish,attrazioni);
             }
 
-        int input;
+        //int input;
         g.assignDistricts();
+        int input;
+    //bool cazzo= false;
+    bool quit = false;
 
-        while (input != 9)
+    // Used for input
+    string title;
+
+    while(quit != true)
+    {
+        displayMenu();
+        cin >> input;
+
+        //clear out cin
+        cin.clear();
+        cin.ignore(10000,'\n');
+        
+        switch (input)
         {
-            cout << "=============Main Menu=============" << endl;
-            cout << "1. Print major cities in Italy" << endl;
-            cout << "2. Connection between all the cities" << endl;
-            cout << "3. What you can do with your budget" << endl;
-            cout << "4. I would like to go to..." << endl;
-            cout << "5. What to eat" << endl;
-            cout << "6. Where to eat" << endl;
-            cout << "7. Hotels" << endl;
-            cout << "8. Things to visit where you are" << endl;
-            cout << "9. Quit" << endl;
-            cin >> input;
-
-            if (input == 1)
-            {
+            // Find a movie
+            {case 1:
                 int g;
                 for (int i=0;i<cityList.size()-1;i++)
                 {
@@ -157,18 +161,16 @@ int main(int argc, char*argv[])
                     g=i;
                 }
                 cout<<cityList[g+1]<<endl;
-            }
-
-            if (input == 2)
-            {
-                g.displayEdges();
-            }
-
-            if (input == 3)
-            {
+                break;}
+            // Print the inventory
+            {case 2:
+                 g.displayEdges();
+                break;}
+            // Delete Node
+            {case 3:
                 string startingCity;
                 cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
+                //cin.ignore(1, '\n');
                 getline(cin, startingCity);
                 bool found = false;
                 for (int i=0; i < cityList.size(); i++)
@@ -190,13 +192,12 @@ int main(int argc, char*argv[])
                     int b=stoi(bu);
                     l.Budget(startingCity,b);
                 }
-            }
-
-            if (input == 4)
-            {
-                string startingCity;
+                break;}
+            // Count Tree
+           { case 4:
+            string startingCity;
                 cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
+                //cin.ignore(1, '\n');
                 getline(cin, startingCity);
                 string endingCity;
                 cout << "Enter the destination:" << endl;
@@ -215,36 +216,11 @@ int main(int argc, char*argv[])
                 if (bothfound == false){
                     cout << "One or more cities doesn't exist, or it is not in our database." << endl;
                 }
-            }
-
-            if (input == 5)
-            {
+                break;}
+            {case 6:
                 string startingCity;
                 cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
-                getline(cin, startingCity);
-                bool found = false;
-                for (int i=0; i < cityList.size(); i++)
-                {
-                    if (cityList[i] == startingCity)
-                    {
-                        found = true;
-                    }
-                }
-                if (found == false)
-                {
-                    cout << "The city you entered is not in our database." << endl;
-                }
-                else{
-                l.Dish(startingCity);
-                }
-            }
-
-            if (input == 6)
-            {
-                string startingCity;
-                cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
+                //cin.ignore(1, '\n');
                 getline(cin, startingCity);
                 bool found = false;
                 for (int i=0; i < cityList.size(); i++)
@@ -261,13 +237,34 @@ int main(int argc, char*argv[])
                 else{
                 l.rest(startingCity);
                 }
-            }
-
-            if (input == 7)
-            {
+                break;}
+            // Quit
+            {case 5:
                 string startingCity;
                 cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
+                //cin.ignore(1, '\n');
+                getline(cin, startingCity);
+                bool found = false;
+                for (int i=0; i < cityList.size(); i++)
+                {
+                    if (cityList[i] == startingCity)
+                    {
+                        found = true;
+                    }
+                }
+                if (found == false)
+                {
+                    cout << "The city you entered is not in our database." << endl;
+                }
+                else{
+                l.Dish(startingCity);
+                }
+                break;
+                }
+            {case 7:
+                string startingCity;
+                cout << "Enter where you are:" << endl;
+                //cin.ignore(1, '\n');
                 getline(cin, startingCity);
                 bool found = false;
                 for (int i=0; i < cityList.size(); i++)
@@ -284,13 +281,12 @@ int main(int argc, char*argv[])
                 else{
                 l.hotel(startingCity);
                 }
-            }
+                break;}
 
-            if (input == 8)
-            {
-                string startingCity;
+                {case 8:
+                    string startingCity;
                 cout << "Enter where you are:" << endl;
-                cin.ignore(1, '\n');
+                //cin.ignore(1, '\n');
                 getline(cin, startingCity);
                 bool found = false;
                 for (int i=0; i < cityList.size(); i++)
@@ -308,13 +304,46 @@ int main(int argc, char*argv[])
                 l.ToDo(startingCity);
                 }
             }
-        }
 
-        file.close();
-        cout << "Goodbye!" << endl;
+
+            {case 9:
+                cout << "Goodbye!" << endl;
+                quit = true;
+                break;
+                }
+
+            {default:
+                cout << "Invalid Input" << endl;
+                        // cin.clear();
+                        // cin.ignore(10000,'\n');
+                break;
+                }
+        }
+    
+ 
+}
+
 
         return 0;
         }
     }
+}
+   
+
+
+/*displays a menu with options to enqueue and dequeue a message and transmit the entire message and quit*/
+void displayMenu()
+{
+ cout << "=============Main Menu=============" << endl;
+            cout << "1. Print major cities in Italy" << endl;
+            cout << "2. Connection between all the cities" << endl;
+            cout << "3. What you can do with your budget" << endl;
+            cout << "4. I would like to go to..." << endl;
+            cout << "5. What to eat" << endl;
+            cout << "6. Where to eat" << endl;
+            cout << "7. Hotels" << endl;
+            cout << "8. Things to visit where you are" << endl;
+            cout << "9. Quit" << endl;
+    return;
 }
 
