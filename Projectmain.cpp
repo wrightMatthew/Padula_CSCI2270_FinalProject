@@ -303,6 +303,7 @@ int main(int argc, char*argv[])
                 else{
                 l.ToDo(startingCity);
                 }
+                break;
             }
 
 
